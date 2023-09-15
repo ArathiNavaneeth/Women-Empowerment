@@ -1,0 +1,80 @@
+<br/><br/>
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <img class="img-fluid" src="assets/img/course-register.png" alt="..." />
+    </div>
+
+     <div class="col-md-6 col-md-offset-2">														
+          <h2>Registration
+        </h2>																												
+          <form [formGroup]="addForm" (ngSubmit)="onSubmit()">														
+                                                                
+            <div class="form-group">														
+              <label for="location">location</label>														
+              <input formControlName="location" placeholder="full Name" name="location" class="form-control" id="location">														
+              <div *ngIf="submitted && addForm.controls.location.errors" class="error">														
+                  <div class="text-danger" *ngIf="addForm.controls.location.errors.required">location is required</div>														
+                </div>														
+            </div>														
+                                                                
+            <div class="form-group">														
+              <label for="ngoName">Ngo Name</label>														
+              <input formControlName="ngoName" placeholder="dob" name="ngoName" class="form-control" id="ngoName">														
+              <div *ngIf="submitted && addForm.controls.ngoName.errors" class="error">														
+                  <div class="text-danger" *ngIf="addForm.controls.ngoName.errors.required">Ngo Name is required</div>														
+                </div>														
+            </div>
+
+        <div class="form-group">														
+              <label for="courseid">Course Id</label>														
+              <input formControlName="courseid" placeholder="course id" name="courseid" class="form-control" id="courseid">														
+              <div *ngIf="submitted && addForm.controls.courseid.errors" class="error">														
+                  <div class="text-danger" *ngIf="addForm.controls.courseid.errors.required">course id is required</div>														
+                </div>														
+            </div>
+
+
+
+        <div class="form-group">														
+                  <label for="userid">User Id</label>														
+                  <input formControlName="userid" placeholder="user id" name="userid" class="form-control" id="userid">														
+                  <div *ngIf="submitted && addForm.controls.userid.errors" class="error">														
+                      <div class="text-danger" *ngIf="addForm.controls.userid.errors.required">user id is required</div>														
+                    </div>														
+                </div>
+        
+
+            <!-- <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" >
+                <label for="course">Course List </label>
+                <select formControlName="course"  (change)="selectCourse($event)" >
+                   <option name="course"  value="0"  > --All-- </option>
+                   <option *ngFor="let d of courseList" value={{d}}>
+                       {{d}}
+                   </option> 
+              </select>
+
+              <form [formGroup]="traineeForm" (ngSubmit)="onSubmit()" >
+                <label for="userId">Trainee List </label>
+                <select formControlName="userId"  (change)="selectTrainee($event)" >
+                   <option name="userId"  value="0"  > --All-- </option>
+                   <option *ngFor="let t of traineeList" value={{t}}>
+                       {{t}}
+                   </option> 
+              </select> -->
+                                                                
+       <button class="btn btn-success">Save</button>&nbsp; &nbsp;														
+            <button class="btn btn-danger" type="reset">Cancel</button>														
+        &nbsp; &nbsp;														
+            <a class="btn btn-warning" href="">Back to Home</a> 
+            <a class="btn btn-primary" routerLink="/traineelogin">Login</a> 														
+                                                                
+            <br/><br/>
+        														
+          </form>
+     </div>
+           
+         
+       
+    
+    
+        

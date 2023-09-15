@@ -1,0 +1,44 @@
+<br/><br/>	
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <img class="img-fluid" src="assets/img/trainee-login.png" alt="..." />
+    </div>													
+<div class="col-md-6 col-md-offset-2">														
+  <h2>Login</h2>														
+  <br/>														
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">		
+    
+    <div class="col-lg-6 form-group">														
+              <label for="fullName">User Name</label>														
+              <input formControlName="fullName" placeholder="Full Name" name="fullName" class="form-control" id="fullName">														
+              <div *ngIf="submitted && loginForm.controls.fullName.errors" class="error">														
+                  <div class="text-danger" *ngIf="loginForm.controls.fullName.errors.required">Username is required</div>														
+                </div>														
+            </div>		
+														
+    <div class="col-lg-6 form-group">														
+      <label for="password">Password</label>														
+      <input type ="password" formControlName="password" placeholder="Password" name="password" class="form-control" id="password">														
+      <div *ngIf="submitted && loginForm.controls.password.errors" class="error">														
+          <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is required</div>														
+        </div>														
+    </div>														
+																										
+    <div class="col-lg-12 form-group">															
+    <button class="btn btn-success">Login</button>														
+    <button class="btn btn-danger" type="reset">Cancel</button>																											
+    <a class="btn btn-warning" href="">Back to Home</a> 
+    <a class="btn btn-primary" href="/step-login">Register</a> 	
+    
+    </div>
+    <div *ngIf="invalidLogin" class="error">
+
+        <div class="text-danger">Invalid credentials.</div>
+
+      </div>
+														
+    <br/><br/>														
+  </form>
+</div>														
+</div>		
+<router-outlet></router-outlet>

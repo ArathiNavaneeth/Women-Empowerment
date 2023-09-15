@@ -1,0 +1,88 @@
+
+    <br/><br/>
+    <div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <img class="img-fluid" src="assets/img/step-login.png" alt="..." />
+    </div>	
+     <div class="col-md-6 col-md-offset-2">														
+          <h2>Registration</h2>																											
+          <form [formGroup]="addForm" (ngSubmit)="onSubmit()">														
+                                                                
+            <div class="form-group">														
+              <label for="fullName">FullName</label>														
+              <input formControlName="fullName" placeholder="full Name" name="fullName" class="form-control" id="fullName">														
+              <div *ngIf="submitted && addForm.controls.fullName.errors" class="error">														
+                  <div class="text-danger" *ngIf="addForm.controls.fullName.errors.required">Fullname is required</div>														
+                </div>														
+            </div>														
+                                                                
+            <div class="form-group">														
+              <label for="dob">Date of Birth</label>														
+              <input formControlName="dob" placeholder="dob" name="dob" class="form-control" id="dob">														
+              <div *ngIf="submitted && addForm.controls.dob.errors" class="error">														
+                  <div class="text-danger" *ngIf="addForm.controls.dob.errors.required">DOB is required</div>														
+                </div>														
+            
+        
+        <div class="form-group">														
+                  <label for="gender">Gender</label>														
+                  <input formControlName="gender" placeholder="gender" name="gender" class="form-control" id="gender">														
+                  <div *ngIf="submitted && addForm.controls.gender.errors" class="error">														
+                      <div class="text-danger" *ngIf="addForm.controls.gender.errors.required">DOB is required</div>														
+                    </div>														
+                </div>
+                                                                
+        
+            <div class="form-group">														
+                  <label for="contactNumber">Contact Number</label>														
+                  <input type="contactNumber" formControlName="contactNumber" placeholder="contact number" name="contactNumber" class="form-control" id="contactNumber">														
+                  <div *ngIf="submitted && addForm.controls.contactNumber.errors" class="error">														
+                      <div class="text-danger" *ngIf="addForm.controls.contactNumber.errors.required">Contact Number is required</div>														
+                    </div>														
+                </div>
+            
+            <div class="form-group">														
+                      <label for="emailID">Email Id</label>														
+                      <input type="emailID" formControlName="emailID" placeholder="email" name="emailID" class="form-control" id="emailID">														
+                      <div *ngIf="submitted && addForm.controls.emailID.errors" class="error">														
+                          <div class="text-danger" *ngIf="addForm.controls.emailID.errors.required">Email is required</div>														
+                        </div>														
+                    </div>
+
+                <div class="form-group">														
+                          <label for="address">Address</label>														
+                          <input type="address" formControlName="address" placeholder="address" name="address" class="form-control" id="address">														
+                          <div *ngIf="submitted && addForm.controls.address.errors" class="error">														
+                              <div class="text-danger" *ngIf="addForm.controls.address.errors.required">Addressis required</div>														
+                            </div>														
+                        </div>
+
+                    <div class="form-group">														
+                              <label for="aadharNumber">Adhaar Number</label>														
+                              <input type="aadharNumber" formControlName="aadharNumber" placeholder="Adhaar" name="aadharNumber" class="form-control" id="aadharNumber">														
+                              <div *ngIf="submitted && addForm.controls.aadharNumber.errors" class="error">														
+                                  <div class="text-danger" *ngIf="addForm.controls.aadharNumber.errors.required">Adhaar is required</div>														
+                                </div>														
+                            </div>
+
+                        <div class="form-group">														
+                                  <label for="password">Password</label>														
+                                  <input type="password" formControlName="password" placeholder="pass" name="password" class="form-control" id="password">														
+                                  <div *ngIf="submitted && addForm.controls.password.errors" class="error">														
+                                      <div class="text-danger" *ngIf="addForm.controls.password.errors.required">password is required</div>														
+                                    </div>														
+                                </div>
+            														
+            <button class="btn btn-success">Save</button>&nbsp; &nbsp;														
+            <button class="btn btn-danger" type="reset">Cancel</button>														
+        &nbsp; &nbsp;														
+            <a class="btn btn-warning" href="">Back to Home</a> 
+            <a class="btn btn-primary" routerLink="/traineelogin">Login</a> 														
+                                                                
+            <br/><br/>
+    </div>														
+          </form>														
+    </div>
+</div>
+
+        
